@@ -1,0 +1,48 @@
+CREATE TABLE adress (
+    id SMALLINT(5) NOT NULL AUTO_INCREMENT,
+    meno VARCHAR(50) NOT NULL,
+    priezvisko VARCHAR(50) NOT NULL,
+    ulica VARCHAR(50) NOT NULL,
+    mesto VARCHAR(50) NOT NULL,
+    psc INT(5) NOT NULL,
+    typ CHAR(1) NOT NULL,
+    poznamka VARCHAR(50) DEFAULT NULL,
+    tel VARCHAR(20) DEFAULT NULL,
+    email VARCHAR(50) DEFAULT NULL,
+    akt TINYINT(1) NOT NULL DEFAULT 1,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE orders (
+    id MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
+    id_adress INT(11) NOT NULL,
+    datum DATE NOT NULL,
+    obed_a TINYINT(4) NOT NULL DEFAULT 0,
+    obed_b TINYINT(4) NOT NULL DEFAULT 0,
+    obed_d TINYINT(4) NOT NULL DEFAULT 0,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE price_b (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    date_a DATE NOT NULL,
+    date_b DATE DEFAULT NULL,
+    price_b DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE price_l (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    date_a DATE NOT NULL,
+    date_b DATE DEFAULT NULL,
+    price_l DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE price_s (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    date_a DATE NOT NULL,
+    date_b DATE DEFAULT NULL,
+    price_s DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id)
+);

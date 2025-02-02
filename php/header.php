@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/global.css">
 </head>
 <body>
-    <!-- Header s menu -->
     <header>
         <nav>
             <ul>
@@ -26,7 +25,6 @@
                 <li>
                     <a href="#">Zákazníci</a>
                     <ul>
-                        <!--li><a href="../php/view.php">Nový zákazník</a></li-->
                         <li><a href="../php/list.php">Zoznam zákazníkov</a></li>
                     </ul>
                 </li>
@@ -34,6 +32,4 @@
             </ul>
         </nav>
     </header>
-
-    <!-- Hlavný obsah -->
     <main>
